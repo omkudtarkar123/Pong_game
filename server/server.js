@@ -1,5 +1,5 @@
 //Access-Control-Allow-Origin: 'http://localhost:3000'
-let express = require("express")
+/*let express = require("express")
 let app = express()
 let http = require("http").createServer(app)
 
@@ -11,6 +11,24 @@ const io = require("socket.io")(http, {
     credentials: true
   },
   allowEIO3: true
+});*/
+
+import express from "express";
+import http from "http";
+
+const app = express();
+const server = http.createServer(app);
+
+const io = require("socket.io")(server, {
+  handlePreflightRequest: (req, res) => {
+      const headers = {
+          "Access-Control-Allow-Headers": "Content-Type, Authorization",
+          "Access-Control-Allow-Origin": req.headers.origin, //or the specific origin you want to give access to,
+          "Access-Control-Allow-Credentials": true
+      };
+      res.writeHead(200, headers);
+      res.end();
+  }
 });
 
 const { gameLoop, getUpdatedVelocity, initGame, } = require('./game')
