@@ -3,15 +3,15 @@ let express = require("express")
 let app = express()
 let http = require("http").createServer(app)
 
-/*const io = require("socket.io")(http, {
+const io = require("socket.io")(http, {
   cors: {
-    origin: 'https://git.heroku.com/murmuring-sands-48271.git/https://adoring-hodgkin-d40b8b.netlify.app/',
+    origin: 'https://adoring-hodgkin-d40b8b.netlify.app/',
     methods: ["GET", "POST", "DELETE", "HEAD", "OPTIONS"],
     transports: ['websocket', 'polling'],
     credentials: true
   },
   allowEIO3: true
-});*/
+});
 
 /*import express from "express";
 import http from "http";
@@ -33,7 +33,7 @@ const io = require("socket.io")(server, {
 
 io.set('origins', io.set('origins', 'https://adoring-hodgkin-d40b8b.netlify.app/'));*/
 
-import { createServer } from "http";
+/*import { createServer } from "http";
 import { Server } from "socket.io";
 
 const httpServer = createServer();
@@ -41,7 +41,7 @@ const io = new Server(httpServer, {
   cors: {
     origin: 'https://git.heroku.com/murmuring-sands-48271.git/https://adoring-hodgkin-d40b8b.netlify.app/'
   }
-});
+});*/
 
 /*const io = new Server(httpServer, {
   cors: {
