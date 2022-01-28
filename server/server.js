@@ -3,7 +3,7 @@ let express = require("express")
 let app = express()
 let http = require("http").createServer(app)
 
-const io = require("socket.io")(http, {
+/*const io = require("socket.io")(http, {
   cors: {
     origin: 'https://git.heroku.com/murmuring-sands-48271.git/https://adoring-hodgkin-d40b8b.netlify.app/',
     methods: ["GET", "POST", "DELETE", "HEAD", "OPTIONS"],
@@ -11,7 +11,7 @@ const io = require("socket.io")(http, {
     credentials: true
   },
   allowEIO3: true
-});
+});*/
 
 /*import express from "express";
 import http from "http";
