@@ -5,8 +5,8 @@ let http = require("http").createServer(app)
 
 const io = require("socket.io")(http, {
   cors: {
-    origin: 'https://adoring-hodgkin-d40b8b.netlify.app/',
-    methods: ["GET", "POST", "DELETE", "HEAD", "OPTIONS"],
+    origin: 'https://adoring-hodgkin-d40b8b.netlify.app',
+    methods: ["GET", "POST"],
     transports: ['websocket', 'polling'],
     credentials: true
   },
