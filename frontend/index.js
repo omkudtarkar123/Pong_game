@@ -6,7 +6,7 @@ const BALL_COLOUR = '#FFFFFF'
 
 //const socket = io('http://localhost:3000')
 //const socket = io('https://sleepy-island-33889.herokuapp.com/');
-const socket = io('https://sheltered-shore-62334.herokuapp.com')
+const socket = io('https://sheltered-shore-62334.herokuapp.com/')
 
 /*import { io } from "socket.io-client";
 const socket = io('https://sheltered-shore-62334.herokuapp.com/', {
