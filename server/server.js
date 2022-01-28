@@ -31,7 +31,7 @@ const io = require("socket.io")(server, {
   }
 });
 
-io.set('origins', io.set('origins', 'http://yourdomain.com:80'));
+io.set('origins', io.set('origins', 'https://adoring-hodgkin-d40b8b.netlify.app/'));
 
 const { gameLoop, getUpdatedVelocity, initGame, } = require('./game')
 const { FRAME_RATE } = require('./constants')
