@@ -43,15 +43,15 @@ const io = new Server(httpServer, {
   }
 });*/
 
-/*const io = new Server(httpServer, {
+const io = new Server(httpServer, {
   cors: {
     origin: "https://adoring-hodgkin-d40b8b.netlify.app/",
     allowedHeaders: ["my-custom-header"],
     credentials: true
   }
-});*/
+});
 
-import { createServer } from "http";
+/*import { createServer } from "http";
 import { Server } from "socket.io";
 
 const httpServer = createServer();
@@ -62,7 +62,7 @@ const io = new Server(httpServer, {
     // origin: ["https://my-frontend.com", "https://my-other-frontend.com", "http://localhost:3000"],
     credentials: true
   }
-});
+});*/
 
 const { gameLoop, getUpdatedVelocity, initGame, } = require('./game')
 const { FRAME_RATE } = require('./constants')
