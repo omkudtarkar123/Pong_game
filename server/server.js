@@ -1,17 +1,17 @@
 //Access-Control-Allow-Origin: 'http://localhost:3000'
-/*let express = require("express")
+let express = require("express")
 let app = express()
 let http = require("http").createServer(app)
 
 const io = require("socket.io")(http, {
   cors: {
-    origin: 'https://adoring-hodgkin-d40b8b.netlify.app/',
+    origin: 'https://git.heroku.com/murmuring-sands-48271.git/https://adoring-hodgkin-d40b8b.netlify.app/',
     methods: ["GET", "POST", "DELETE", "HEAD", "OPTIONS"],
     transports: ['websocket', 'polling'],
     credentials: true
   },
   allowEIO3: true
-});*/
+});
 
 /*import express from "express";
 import http from "http";
@@ -43,13 +43,13 @@ const io = new Server(httpServer, {
   }
 });*/
 
-const io = new Server(httpServer, {
+/*const io = new Server(httpServer, {
   cors: {
     origin: "https://adoring-hodgkin-d40b8b.netlify.app/",
     allowedHeaders: ["my-custom-header"],
     credentials: true
   }
-});
+});*/
 
 /*import { createServer } from "http";
 import { Server } from "socket.io";
