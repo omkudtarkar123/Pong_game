@@ -33,12 +33,13 @@ const io = require("socket.io")(server, {
 
 io.set('origins', io.set('origins', 'https://adoring-hodgkin-d40b8b.netlify.app/'));*/
 
-const io = require("socket.io")(httpServer, {
+import { createServer } from "http";
+import { Server } from "socket.io";
+
+const httpServer = createServer();
+const io = new Server(httpServer, {
   cors: {
-    origin: 'https://adoring-hodgkin-d40b8b.netlify.app/',
-    methods: ["GET", "POST"],
-    allowedHeaders: ["my-custom-header"],
-    credentials: true
+    origin: 'https://adoring-hodgkin-d40b8b.netlify.app/'
   }
 });
 
