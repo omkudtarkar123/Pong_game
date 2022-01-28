@@ -1,9 +1,9 @@
 //Access-Control-Allow-Origin: 'http://localhost:3000'
-/*let express = require("express")
+let express = require("express")
 let app = express()
 let http = require("http").createServer(app)
 
-const io = require("socket.io")(http, {
+/*const io = require("socket.io")(http, {
   cors: {
     origin: 'https://adoring-hodgkin-d40b8b.netlify.app/',
     methods: ["GET", "POST", "DELETE", "HEAD", "OPTIONS"],
@@ -11,12 +11,12 @@ const io = require("socket.io")(http, {
     credentials: true
   },
   allowEIO3: true
-});*/
+});
 
 import express from "express";
 import http from "http";
 
-const app = express();
+const app = express();*/
 const server = http.createServer(app);
 
 const io = require("socket.io")(server, {
