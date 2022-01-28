@@ -13,7 +13,7 @@ const io = require("socket.io")(http, {
   allowEIO3: true
 });*/
 
-import express from "express";
+/*import express from "express";
 import http from "http";
 
 const app = express();
@@ -31,7 +31,16 @@ const io = require("socket.io")(server, {
   }
 });
 
-io.set('origins', io.set('origins', 'https://adoring-hodgkin-d40b8b.netlify.app/'));
+io.set('origins', io.set('origins', 'https://adoring-hodgkin-d40b8b.netlify.app/'));*/
+
+const io = require("socket.io")(httpServer, {
+  cors: {
+    origin: 'https://adoring-hodgkin-d40b8b.netlify.app/',
+    methods: ["GET", "POST"],
+    allowedHeaders: ["my-custom-header"],
+    credentials: true
+  }
+});
 
 const { gameLoop, getUpdatedVelocity, initGame, } = require('./game')
 const { FRAME_RATE } = require('./constants')
@@ -132,4 +141,4 @@ function emitGameOver(room, winner) {
     .emit('gameOver', JSON.stringify({ winner }))
 }
 
-server.listen(process.env.PORT || 3000);
+io.listen(process.env.PORT || 3000);
