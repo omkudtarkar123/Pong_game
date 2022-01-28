@@ -5,7 +5,7 @@ let http = require("http").createServer(app)
 
 const io = require("socket.io")(http, {
   cors: {
-    origin: "http://127.0.0.1:5501",
+    origin: 'https://adoring-hodgkin-d40b8b.netlify.app/',
     methods: ["GET", "POST"],
     transports: ['websocket', 'polling'],
     credentials: true
@@ -112,4 +112,4 @@ function emitGameOver(room, winner) {
     .emit('gameOver', JSON.stringify({ winner }))
 }
 
-io.listen(3000);
+io.listen(process.env.PORT || 3000);
