@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pong Game</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <style>
+    .playerone {
+      color: red
+    }
+  </style>
+
+<style>
+  .playertwo {
+    color: blue
+  }
+</style>
+
+  <style>
+    #gameScreen {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <section class="vh-100">
+    <div class="container h-100">
+
+      <div id="initialScreen" class="h-100">
+        <div class="d-flex flex-column align-items-center justify-content-center h-100">
+            <h1>Multiplayer Pong Game</h1>
+            <button
+              type="submit"
+              class="btn btn-success"
+              id="newGameButton"
+            >
+              Create New Game
+            </button>
+            <div>OR</div>
+            <div class="form-group">
+              <input type="text" placeholder="Enter Game Code" id="gameCodeInput"/>
+            </div>
+            <button
+              type="submit"
+              class="btn btn-success"
+              id="joinGameButton"
+            >
+              Join Game
+            </button>
+        </div>
+      </div>
+
+      <div id="gameScreen" class="h-100">
+        <div class="d-flex flex-column align-items-center justify-content-center h-100">
+
+          <h1>Your game code is: <span id="gameCodeDisplay"></span></h1>
+          <div class="playerone" style="position: relative; right: 240px"><p>Player 1 score: <span id="score1Display"></span></p></div>
+          <canvas id="canvas"></canvas>
+          <p>&nbsp</p>
+          <div class="playertwo" style="position: relative; left: 240px"><p>Player 2 score: <span id="score2Display"></span></p></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
