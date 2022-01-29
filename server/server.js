@@ -1,5 +1,5 @@
 //Access-Control-Allow-Origin: 'http://localhost:3000'
-/*let express = require("express")
+let express = require("express")
 let app = express()
 let http = require("http").createServer(app)
 
@@ -11,7 +11,7 @@ const io = require("socket.io")(http, {
     credentials: true
   },
   allowEIO3: true
-});*/
+});
 
 /*import express from "express";
 import http from "http";
@@ -64,11 +64,11 @@ const io = new Server(httpServer, {
   }
 });*/
 
-const { Server } = require("socket.io");
+/*const { Server } = require("socket.io");
 
 const io = new Server({
   serveClient: false
-});
+});*/
 
 const { gameLoop, getUpdatedVelocity, initGame, } = require('./game')
 const { FRAME_RATE } = require('./constants')
