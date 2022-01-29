@@ -5,13 +5,29 @@ let http = require("http").createServer(app)
 
 const io = require("socket.io")(http, {
   cors: {
-    origin: 'https://adoring-hodgkin-d40b8b.netlify.app/',
+    origin: '*',
     methods: ["GET", "POST"],
     transports: ['websocket', 'polling'],
     credentials: true
   },
   allowEIO3: true
 });
+
+
+/*import { createServer } from "http";
+import { Server } from "socket.io";
+
+const httpServer = createServer();
+const io = new Server(httpServer, {
+  cors: {
+    origin: "https://adoring-hodgkin-d40b8b.netlify.app/",
+    // or with an array of origins
+    // origin: ["https://my-frontend.com", "https://my-other-frontend.com", "http://localhost:3000"],
+    credentials: true
+  }
+});*/
+
+
 
 /*import express from "express";
 import http from "http";
@@ -51,18 +67,7 @@ const io = new Server(httpServer, {
   }
 });*/
 
-/*import { createServer } from "http";
-import { Server } from "socket.io";
 
-const httpServer = createServer();
-const io = new Server(httpServer, {
-  cors: {
-    origin: "https://adoring-hodgkin-d40b8b.netlify.app/",
-    // or with an array of origins
-    // origin: ["https://my-frontend.com", "https://my-other-frontend.com", "http://localhost:3000"],
-    credentials: true
-  }
-});*/
 
 /*const { Server } = require("socket.io");
 
